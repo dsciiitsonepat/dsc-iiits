@@ -10,8 +10,8 @@ export default function Home() {
         <h2>Developer Students Club</h2>
         <h3>powered by google</h3>
         <p>
-          Developer Studemt Clubs are university based community groups for
-          studemts interested in Google Developer technologies
+          Developer Student Clubs are university based community groups for
+          students interested in Google Developer technologies
         </p>
         <Button
           size="large"
