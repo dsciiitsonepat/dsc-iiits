@@ -6,36 +6,35 @@ import {
   makeStyles,
   MenuItem,
   Toolbar,
-  Button
+  Button,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import * as Md from "react-icons/md";
 import logo from "../assets/logo4.png";
 
 const navData = [
-	{
-	  label: "Home",
-	  href: "/home",
-	},
-	{
-	  label: "Team",
-	  href: "/team",
-	},
-	{
-	  label: "Events",
-	  href: "/events",
-	},
-	{
-	  label: "Contact Us",
-	  href: "/contact",
-	},
-  ];
-  
+  {
+    label: "Home",
+    href: "/home",
+  },
+  {
+    label: "Team",
+    href: "/team",
+  },
+  {
+    label: "Events",
+    href: "/events",
+  },
+  {
+    label: "Contact Us",
+    href: "/contact",
+  },
+];
 
 const useStyles = makeStyles(() => ({
   header: {
     backgroundColor: "transparent",
-	paddingTop:"32px",
+    paddingTop: "32px",
     paddingRight: "79px",
     paddingLeft: "118px",
     "@media (max-width: 900px)": {
@@ -57,15 +56,23 @@ const useStyles = makeStyles(() => ({
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
-	color:"black"
+    color: "black",
   },
   drawerContainer: {
-    padding: "20px 30px",
+    padding: "20px 20px",
+    justifyContent: "space-evenly"
+  },
+  menuItem: {
+    padding: "50px",
+    justifyContent: "center",
+    fontFamily: "Poppins",
+    fontWeight: "500",
+    fontSize: "17px",
   },
 }));
 
 export default function Header() {
-  const { header,toolbar } = useStyles();
+  const { header, toolbar, drawerContainer,menuItem } = useStyles();
   const [state, setState] = useState({
     mobileView: false,
     drawerOpen: false,
@@ -89,8 +96,16 @@ export default function Header() {
   const navBarDesktop = () => {
     return (
       <Toolbar className={toolbar}>
-        <img src={logo} alt="logo" style={{width:"30%"}}></img>
-        <div style={{width:"55%", display:"flex", justifyContent:"space-around"}}>{getMenu()}</div>
+        <img src={logo} alt="logo" style={{ width: "30%" }}></img>
+        <div
+          style={{
+            width: "55%",
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
+          {getMenu()}
+        </div>
       </Toolbar>
     );
   };
@@ -109,9 +124,9 @@ export default function Header() {
           <Md.MdMenu />
         </IconButton>
         <Drawer open={drawerOpen} onClose={handleDrawerClose}>
-          <div>{getMobileMenu()}</div>
+          <div className={drawerContainer}>{getMobileMenu()}</div>
         </Drawer>
-        <img src={logo} alt="logo" style={{width:"100%"}}></img>
+        <img src={logo} alt="logo" style={{ width: "100%" }}></img>
       </Toolbar>
     );
   };
@@ -127,12 +142,11 @@ export default function Header() {
             key: label,
           }}
         >
-			<MenuItem>{label}</MenuItem>
-		</Link>
+          <MenuItem className={menuItem}>{label}</MenuItem>
+        </Link>
       );
     });
   };
-
 
   const getMenu = () => {
     return navData.map(({ label, href }) => {

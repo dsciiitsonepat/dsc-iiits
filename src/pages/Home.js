@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <div className="container">
         <h2>Developer Students Club</h2>
-        <h3>powered by google</h3>
+        <h3>Powered by Google</h3>
         <p>
           Developer Student Clubs are university based community groups for
           students interested in Google Developer technologies
