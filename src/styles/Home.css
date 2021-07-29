@@ -1,0 +1,29 @@
+.container {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	left: 10%;
+	position: fixed;
+}
+
+.bg {
+	position: fixed;
+	left: 48%;
+	top:-80%;
+	width: 1424px;
+	height: 1424px;
+	border-bottom-left-radius: 100%;
+}
+
+.bg .logo-dsc {
+	width:200px;
+	height:200px;
+	position:fixed; 
+	bottom:25%;
+	left:60%;
+	border-radius:100%;
+}

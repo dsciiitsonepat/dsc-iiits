@@ -1,15 +1,14 @@
 import logo from './assets/logo1.JPG';
 import inprog from './logo.svg'
 import './styles/App.css';
+import Header from './components/Header';
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App" style={{backgroundColor:"#f7f7f7"}}>
-      <img src={logo}></img>
-      <div className="inProg">
-        <img src={inprog}></img>
-        <h2>In Progress</h2>
-      </div>
+      <Header/>
+      <Home/>
     </div>
   );
 }
