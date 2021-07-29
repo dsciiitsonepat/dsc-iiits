@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import * as Md from "react-icons/md";
-import logo from "../assets/logo4.JPG";
+import logo from "../assets/logo4.png";
 
 const navData = [
 	{
