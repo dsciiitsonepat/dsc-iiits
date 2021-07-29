@@ -1,6 +1,6 @@
 import logo from './assets/logo1.JPG';
 import inprog from './logo.svg'
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (
