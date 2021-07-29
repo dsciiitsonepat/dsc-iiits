@@ -111,7 +111,7 @@ export default function Header() {
         <Drawer open={drawerOpen} onClose={handleDrawerClose}>
           <div>{getMobileMenu()}</div>
         </Drawer>
-        <img src={logo} style={{width:"100%"}}></img>
+        <img src={logo} style={{width:"50%"}}></img>
       </Toolbar>
     );
   };
