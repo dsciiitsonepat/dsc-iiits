@@ -89,7 +89,7 @@ export default function Header() {
   const navBarDesktop = () => {
     return (
       <Toolbar className={toolbar}>
-        <img src={logo} style={{width:"30%"}}></img>
+        <img src={logo} alt="logo" style={{width:"30%"}}></img>
         <div style={{width:"55%", display:"flex", justifyContent:"space-around"}}>{getMenu()}</div>
       </Toolbar>
     );
@@ -111,7 +111,7 @@ export default function Header() {
         <Drawer open={drawerOpen} onClose={handleDrawerClose}>
           <div>{getMobileMenu()}</div>
         </Drawer>
-        <img src={logo} style={{width:"100%"}}></img>
+        <img src={logo} alt="logo" style={{width:"100%"}}></img>
       </Toolbar>
     );
   };
