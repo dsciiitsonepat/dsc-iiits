@@ -6,10 +6,10 @@ import Contacts from "./pages/Contacts";
 import Events from "./pages/Events";
 import {Swiper,SwiperSlide} from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import SwiperCore, { Navigation, Pagination} from 'swiper';
+import SwiperCore, { Navigation} from 'swiper';
 import {useState} from 'react';
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation]);
 function App() {
   const [slide,setSlide] = useState(0);
   const [swiper, setSwiper] = useState(null);
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App" style={{backgroundColor:"#f7f7f7"}}>
       <Header setSlide={setSlide} slideTo={slideTo} slide={slide}/>
-      <Swiper onSwiper={setSwiper} navigation pagination onSlideChange={(swipe)=>{setSlide(swipe.realIndex)}} style={{width:"100%", height:"100%"}} >
+      <Swiper onSwiper={setSwiper} navigation onSlideChange={(swipe)=>{setSlide(swipe.realIndex)}} style={{width:"100%", height:"100%"}} >
         <SwiperSlide><Home setSlide={setSlide}/></SwiperSlide>
         <SwiperSlide><Team setSlide={setSlide}/></SwiperSlide>
         <SwiperSlide><Events setSlide={setSlide}/></SwiperSlide>
