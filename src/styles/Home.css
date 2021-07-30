@@ -25,11 +25,12 @@
 }
 
 .bg {
+    --circleSize : 85vw;
     position: fixed;
-    left: 48vw;
-    top: -80%;
-    width: 1424px;
-    height: 1424px;
+    width: var(--circleSize);
+    height: var(--circleSize);
+    top: calc(0vh - var(--circleSize)/2);
+    left: calc(90vw - var(--circleSize)/2);
     border-bottom-left-radius: 100%;
     animation: bg-green 2s ease
 }
