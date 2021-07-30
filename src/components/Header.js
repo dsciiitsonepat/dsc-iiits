@@ -15,19 +15,19 @@ import logo from "../assets/logo4.png";
 const navData = [
   {
     label: "Home",
-    href: "/home",
+    link: "/home",
   },
   {
     label: "Team",
-    href: "/team",
+    link: "/team",
   },
   {
     label: "Events",
-    href: "/events",
+    link: "/events",
   },
   {
     label: "Contact Us",
-    href: "/contact",
+    link: "/contact",
   },
 ];
 
