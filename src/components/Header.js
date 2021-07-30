@@ -6,36 +6,39 @@ import {
   makeStyles,
   MenuItem,
   Toolbar,
-  Button
+  Button,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import * as Md from "react-icons/md";
 import logo from "../assets/logo4.png";
 
 const navData = [
-	{
-	  label: "Home",
-	  href: "/home",
-	},
-	{
-	  label: "Team",
-	  href: "/team",
-	},
-	{
-	  label: "Events",
-	  href: "/events",
-	},
-	{
-	  label: "Contact Us",
-	  href: "/contact",
-	},
-  ];
-  
+  {
+    label: "Home",
+    link: "/home",
+    index:0,
+  },
+  {
+    label: "Team",
+    link: "/team",
+    index:1,
+  },
+  {
+    label: "Events",
+    link: "/events",
+    index:2,
+  },
+  {
+    label: "Contact Us",
+    link: "/contact",
+    index:3,
+  },
+];
 
 const useStyles = makeStyles(() => ({
   header: {
     backgroundColor: "transparent",
-	paddingTop:"32px",
+    paddingTop: "32px",
     paddingRight: "79px",
     paddingLeft: "118px",
     "@media (max-width: 900px)": {
@@ -57,15 +60,23 @@ const useStyles = makeStyles(() => ({
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
-	color:"black"
+    color: "black",
   },
   drawerContainer: {
-    padding: "20px 30px",
+    padding: "20px 20px",
+    justifyContent: "space-evenly"
+  },
+  menuItem: {
+    padding: "50px",
+    justifyContent: "center",
+    fontFamily: "Poppins",
+    fontWeight: "500",
+    fontSize: "17px",
   },
 }));
 
-export default function Header() {
-  const { header,toolbar } = useStyles();
+export default function Header({slide, slideTo}) {
+  const { header, toolbar, drawerContainer,menuItem } = useStyles();
   const [state, setState] = useState({
     mobileView: false,
     drawerOpen: false,
@@ -89,8 +100,16 @@ export default function Header() {
   const navBarDesktop = () => {
     return (
       <Toolbar className={toolbar}>
-        <img src={logo} style={{width:"30%"}}></img>
-        <div style={{width:"55%", display:"flex", justifyContent:"space-around"}}>{getMenu()}</div>
+        <img src={logo} alt="logo" style={{ width: "30%" }}></img>
+        <div
+          style={{
+            width: "55%",
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
+          {getMenu()}
+        </div>
       </Toolbar>
     );
   };
@@ -109,9 +128,13 @@ export default function Header() {
           <Md.MdMenu />
         </IconButton>
         <Drawer open={drawerOpen} onClose={handleDrawerClose}>
-          <div>{getMobileMenu()}</div>
+          <div className={drawerContainer}>{getMobileMenu()}</div>
         </Drawer>
+<<<<<<< HEAD
         <img src={logo} style={{width:"50%"}}></img>
+=======
+        <img src={logo} alt="logo" style={{ width: "100%" }}></img>
+>>>>>>> fab96561a65b1a6aae9bfd8f9ff39f749705d250
       </Toolbar>
     );
   };
@@ -127,22 +150,26 @@ export default function Header() {
             key: label,
           }}
         >
-			<MenuItem>{label}</MenuItem>
-		</Link>
+          <MenuItem className={menuItem}>{label}</MenuItem>
+        </Link>
       );
     });
   };
 
+  const COLORS = ["#109D58","#FF4D4D", "#4286F5","#FFD65F"]
 
   const getMenu = () => {
-    return navData.map(({ label, href }) => {
+    return navData.map(({ label, index}) => {
       return (
         <Button
+        onClick={()=>{slideTo(index)}}
           {...{
             key: label,
-            color: "inherit",
-            to: href,
+            color: index===slide?COLORS[index%COLORS.length]:"inherit",
           }}
+          style={
+            {color: index===slide?COLORS[index%COLORS.length]:"inherit"}
+          }
         >
           {label}
         </Button>
