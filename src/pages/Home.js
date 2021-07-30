@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <div className="container">
         <h2>Developer Students Club</h2>
-        <h3>powered by google</h3>
+        <h3>Powered by Google</h3>
         <p>
           Developer Student Clubs are university based community groups for
           students interested in Google Developer technologies
@@ -29,7 +29,7 @@ export default function Home() {
         style={{ backgroundColor: "#c8ffe4", borderRadius: "100%" }}
       >
         <div className="logo-dsc" style={{ backgroundColor: "#f0f0f0" }}>
-          <img src={logo} style={{ width: "100%" }}></img>
+          <img src={logo} alt="logo" style={{ width: "100%" }}></img>
         </div>
       </div>
     </>

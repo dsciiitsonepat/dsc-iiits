@@ -1,5 +1,3 @@
-// import logo from './assets/logo1.JPG';
-import inprog from './logo.svg'
 import './styles/App.css';
 import Header from './components/Header';
 import Home from "./pages/Home";
