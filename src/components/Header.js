@@ -16,18 +16,22 @@ const navData = [
   {
     label: "Home",
     link: "/home",
+    index:0,
   },
   {
     label: "Team",
     link: "/team",
+    index:1,
   },
   {
     label: "Events",
     link: "/events",
+    index:2,
   },
   {
     label: "Contact Us",
     link: "/contact",
+    index:3,
   },
 ];
 
@@ -71,7 +75,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Header() {
+export default function Header({slide, slideTo}) {
   const { header, toolbar, drawerContainer,menuItem } = useStyles();
   const [state, setState] = useState({
     mobileView: false,
@@ -148,15 +152,20 @@ export default function Header() {
     });
   };
 
+  const COLORS = ["#109D58","#FF4D4D", "#4286F5","#FFD65F"]
+
   const getMenu = () => {
-    return navData.map(({ label, href }) => {
+    return navData.map(({ label, index}) => {
       return (
         <Button
+        onClick={()=>{slideTo(index)}}
           {...{
             key: label,
-            color: "inherit",
-            to: href,
+            color: index===slide?COLORS[index%COLORS.length]:"inherit",
           }}
+          style={
+            {color: index===slide?COLORS[index%COLORS.length]:"inherit"}
+          }
         >
           {label}
         </Button>
