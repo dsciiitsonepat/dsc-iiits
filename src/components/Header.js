@@ -75,7 +75,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Header({slide, slideTo, setSlide}) {
+export default function Header({slide, slideTo}) {
   const { header, toolbar, drawerContainer,menuItem } = useStyles();
   const [state, setState] = useState({
     mobileView: false,
@@ -152,6 +152,8 @@ export default function Header({slide, slideTo, setSlide}) {
     });
   };
 
+  const COLORS = ["#109D58","#FF4D4D", "#4286F5","#FFD65F"]
+
   const getMenu = () => {
     return navData.map(({ label, index}) => {
       return (
@@ -159,8 +161,11 @@ export default function Header({slide, slideTo, setSlide}) {
         onClick={()=>{slideTo(index)}}
           {...{
             key: label,
-            color: index===slide?"primary":"inherit",
+            color: index===slide?COLORS[index%COLORS.length]:"inherit",
           }}
+          style={
+            {color: index===slide?COLORS[index%COLORS.length]:"inherit"}
+          }
         >
           {label}
         </Button>
