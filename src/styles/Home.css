@@ -2,7 +2,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 25vw;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -26,7 +26,7 @@
 
 .bg {
     position: fixed;
-    left: 48%;
+    left: 48vw;
     top: -80%;
     width: 1424px;
     height: 1424px;
@@ -48,7 +48,7 @@
     height: 200px;
     position: fixed;
     bottom: 25%;
-    left: 60%;
+    left: 60vw;
     border-radius: 100%;
     animation: breathing 4s linear infinite normal;
     animation-delay: 2s;
