@@ -1,10 +1,15 @@
-import React from 'react'
-import "../styles/team.css"
+import React from "react";
+import TeamCard from "../components/TeamCard";
+import "../styles/team.css";
 
+
+const COLORS = ["#FFD65F", "#FF4D4D", "#109D58", "#4286F5"]
 export default function Team() {
-	return (
-		<>
-		<h2>Team</h2>
-    </>
-	)
+	let i = 0;
+  return (
+    <div style={{height:"100vh", display:"flex", justifyContent:"center",alignItems:"center", flexDirection:"column"}}>
+      <h2>Team</h2>
+	  <TeamCard color={COLORS[i]}/>
+    </div>
+  );
 }
