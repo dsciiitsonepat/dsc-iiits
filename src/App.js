@@ -29,7 +29,6 @@ function App() {
           <div
         class="bg"
         style={{ borderRadius: "100%" }}
-        onAnimationEnd={() => setBG(0)}
         bggreen = {bggreen}
       >
         <div className="logo-dsc" style={{ backgroundColor: "#f0f0f0" }}>
