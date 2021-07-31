@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site":"dsciiits",
     "public": "build",
     "ignore": [
       "firebase.json",
