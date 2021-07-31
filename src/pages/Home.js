@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/Home.css";
-import logo from "../assets/dsc-logo.png";
 import { Button } from "@material-ui/core";
 
 export default function Home() {
@@ -23,14 +22,6 @@ export default function Home() {
         >
           Join
         </Button>
-      </div>
-      <div
-        class="bg"
-        style={{ backgroundColor: "#c8ffe4", borderRadius: "100%" }}
-      >
-        <div className="logo-dsc" style={{ backgroundColor: "#f0f0f0" }}>
-          <img src={logo} alt="logo" style={{ width: "100%" }}></img>
-        </div>
       </div>
     </>
   );
