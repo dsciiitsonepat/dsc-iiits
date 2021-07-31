@@ -26,7 +26,7 @@ export default function Home() {
       </div>
       <div
         class="bg"
-        style={{ backgroundColor: "#c8ffe4", borderRadius: "100%" }}
+        // style={{ backgroundColor: "#c8ffe4", borderRadius: "100%" }}
       >
         <div className="logo-dsc" style={{ backgroundColor: "#f0f0f0" }}>
           <img src={logo} alt="logo" style={{ width: "100%" }}></img>
