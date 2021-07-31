@@ -10,6 +10,7 @@ import SwiperCore, { Navigation, Pagination} from 'swiper';
 import {useState} from 'react';
 
 SwiperCore.use([Navigation, Pagination]);
+
 function App() {
   const [slide,setSlide] = useState(0);
   const [swiper, setSwiper] = useState(null);
