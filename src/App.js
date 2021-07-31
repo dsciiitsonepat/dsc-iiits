@@ -1,4 +1,5 @@
 import './styles/App.css';
+import './styles/BgCircle.css';
 import Header from './components/Header';
 import React from 'react';
 import Home from "./pages/Home";
@@ -46,6 +47,8 @@ function App() {
          onSlideChange={(swipe)=>{setSlide(swipe.realIndex); setAnimation();}} 
         style={{width:"100%", height:"100%"}} 
       >
+        <SwiperSlide><Home/></SwiperSlide>
+        <SwiperSlide><Team/></SwiperSlide>
         <SwiperSlide><Home/></SwiperSlide>
         <SwiperSlide><Team/></SwiperSlide>
       </Swiper>

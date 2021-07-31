@@ -2,11 +2,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root {
-    --left-pos: -40vw;
-    --right-pos: 48%;
-  }
-
 .App {
     display: flex;
     flex-direction: column;
@@ -18,73 +13,4 @@
 .inProg {
     flex-direction: row;
     display: flex;
-}
-
-.bg{
-    position: fixed;
-    left: 48%;
-    top: -80%;
-    width: 1424px;
-    height: 1424px;
-    border-bottom-left-radius: 100%;
-    background-color: cadetblue;
-
-}
-.bg[bggreen='1']  {
-    background-color: cadetblue;
-    animation: bg-pos2-1 1s ease;
-    left: var(--right-pos);
-}
-.bg[bggreen='2'] {
-    background-color:  lightgreen;
-    animation: bg-pos1-2 1s ease;
-    left: var(--left-pos);
-}
-
-
-@keyframes bg-pos1-2{
-    0% {
-        left: var(--right-pos);
-    }
-    100% {
-        left: var(--left-pos);
-    }
-}
-@keyframes bg-pos2-1{
-    0% {
-        left: var(--left-pos);
-    }
-    100% {
-        left: var(--right-pos);
-    }
-}
-
-
-@keyframes bggreen {
-    0% {
-        transform: scale(5);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.bg .logo-dsc {
-    width: 200px;
-    height: 200px;
-    position: fixed;
-    bottom: 25%;
-    left: 60%;
-    border-radius: 100%;
-    animation: breathing 4s linear infinite normal;
-    animation-delay: 2s;
-    opacity: 0;
-}
-
-@keyframes breathing {
-    0% {transform: scale(.9);opacity: 1;}
-    25% {transform: scale(1);}
-    50% {transform: scale(.9);}
-    75% {transform: scale(1);}
-    100% {transform: scale(.9);opacity: 1;}
 }
