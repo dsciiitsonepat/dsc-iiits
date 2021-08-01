@@ -2,8 +2,8 @@
 :root {
     --Color1: lightblue;
     --Color2: lightgreen;
-    --Color3: red;
-    --Color4: yellow;
+    --Color3: #FF7276;
+    --Color4: #fffe7a;
     --circleSize: 85vw;
     --pos1-left: 90vw;
     --pos1-top: 0vh;
@@ -21,33 +21,34 @@
     transition: left 1s,top 1s,background-color 1s;
     left: calc(var(--pos1-left) - var(--circleSize)/2);
     top: calc(var(--pos1-top) - var(--circleSize)/2);
+    animation: bg-green 2s ease;
     border-bottom-left-radius: 100%;
     background-color: var(--Color1);
 
 }
-.bg[bggreen='1']  {
+.bg[circleState='1']  {
     background-color: var(--Color1);
     left: calc(var(--pos1-left) - var(--circleSize)/2);
     top: calc(var(--pos1-top) - var(--circleSize)/2);
 }
-.bg[bggreen='2'] {
+.bg[circleState='2'] {
     background-color:  var(--Color2);
     left: calc(var(--pos2-left) - var(--circleSize)/2);
     top: calc(var(--pos2-top) - var(--circleSize)/2);
 }
-.bg[bggreen='3'] {
+.bg[circleState='3'] {
     background-color:  var(--Color3);
     left: calc(var(--pos3-left) - var(--circleSize)/2);
     top: calc(var(--pos3-top) - var(--circleSize)/2);
 }
-.bg[bggreen='4'] {
+.bg[circleState='4'] {
     background-color:  var(--Color4);
     left: calc(var(--pos4-left) - var(--circleSize)/2);
     top: calc(var(--pos4-top) - var(--circleSize)/2);
 }
 
 
-@keyframes bggreen {
+@keyframes bg-green {
     0% {
         transform: scale(5);
     }
@@ -55,72 +56,3 @@
         transform: scale(1);
     }
 }
-
-
-.bg .logo-dsc {
-    width: 200px;
-    height: 200px;
-    position: fixed;
-    bottom: 25%;
-    left: 60%;
-    border-radius: 100%;
-    animation: breathing 4s linear infinite normal;
-    animation-delay: 2s;
-    opacity: 0;
-}
-
-@keyframes breathing {
-    0% {transform: scale(.9);opacity: 1;}
-    25% {transform: scale(1);}
-    50% {transform: scale(.9);}
-    75% {transform: scale(1);}
-    100% {transform: scale(.9);opacity: 1;}
-}
-
-
-@media screen and (max-width: 700px) {
-    .bg .logo-dsc {
-    }
-  }
-  @media screen and (max-width: 620px) {
-    .bg .logo-dsc {
-      width: 180px;
-      height: 180px;
-    }
-  }
-  @media screen and (max-width: 580px) {
-    .bg .logo-dsc {
-      width: 160px;
-      height: 160px;
-    }
-  }
-  @media screen and (max-width: 530px) {
-    .bg .logo-dsc {
-    }
-  }
-  @media screen and (max-width: 490px) {
-    .bg .logo-dsc {
-    }
-  }
-  @media screen and (max-width: 425px) {
-    .bg .logo-dsc {
-      width: 135px;
-      height: 135px;
-    }
-  }
-  @media screen and (max-width: 385px) {
-    .bg .logo-dsc {
-    }
-  }
-  @media screen and (max-width: 360px) {
-    .bg .logo-dsc {
-      width: 115px;
-      height: 115px;
-    }
-  }
-  @media screen and (max-width: 330px) {
-    .bg .logo-dsc {
-      width: 100px;
-      height: 100px;
-    }
-  }

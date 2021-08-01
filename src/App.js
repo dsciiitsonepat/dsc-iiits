@@ -1,5 +1,6 @@
 import './styles/App.css';
 import './styles/BgCircle.css';
+import './styles/Logo.css';
 import Header from './components/Header';
 import React from 'react';
 import Home from "./pages/Home";
@@ -14,7 +15,8 @@ import {useState} from 'react';
 SwiperCore.use([Mousewheel,Pagination]);
 
 function App() {
-  const [bggreen, setBG] = React.useState(0)
+  const [circleState, setBG] = React.useState(0)
+  const [logoState, setLogo] = React.useState(0)
   const [slide,setSlide] = useState(0);
   const [swiper, setSwiper] = useState(null);
   const slideTo = (x) => {
@@ -22,20 +24,17 @@ function App() {
   };
   const setAnimation = (x) => {
         setBG(swiper.realIndex + 1);
+        setLogo(swiper.realIndex + 1);
   }
 
 
   return (
     <div className="App" style={{backgroundColor:"#f7f7f7"}}>
-          <div
-        class="bg"
-        style={{ borderRadius: "100%" }}
-        bggreen = {bggreen}
-      >
-        <div className="logo-dsc" style={{ backgroundColor: "#f0f0f0" }}>
-          <img src={logo} alt="logo" style={{ width: "100%" }}></img>
-        </div>
-      </div>
+          <div class="bg" style={{ borderRadius: "100%" }} circleState = {circleState}>
+            <div className="logo-dsc" style={{ backgroundColor: "#f0f0f0" }} logoState = {logoState}>
+              <img src={logo} alt="logo" style={{ width: "100%" }}></img>
+            </div>
+          </div>  
       <Header setSlide={setSlide} slideTo={slideTo} slide={slide}/>
       <Swiper
          direction={"horizontal"}
