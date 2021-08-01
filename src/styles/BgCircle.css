@@ -1,0 +1,58 @@
+
+:root {
+    --Color1: lightblue;
+    --Color2: lightgreen;
+    --Color3: #FF7276;
+    --Color4: #fffe7a;
+    --circleSize: 85vw;
+    --pos1-left: 90vw;
+    --pos1-top: 0vh;
+    --pos2-left: 0vw;
+    --pos2-top: 0vh;
+    --pos3-left: 0vw;
+    --pos3-top: 100vh;
+    --pos4-left: 90vw;
+    --pos4-top: 100vh;
+  }
+.bg{
+    position: fixed;
+    width: var(--circleSize);
+    height: var(--circleSize);
+    transition: left 1s,top 1s,background-color 1s;
+    left: calc(var(--pos1-left) - var(--circleSize)/2);
+    top: calc(var(--pos1-top) - var(--circleSize)/2);
+    animation: bg-green 2s ease;
+    border-bottom-left-radius: 100%;
+    background-color: var(--Color1);
+
+}
+.bg[circleState='1']  {
+    background-color: var(--Color1);
+    left: calc(var(--pos1-left) - var(--circleSize)/2);
+    top: calc(var(--pos1-top) - var(--circleSize)/2);
+}
+.bg[circleState='2'] {
+    background-color:  var(--Color2);
+    left: calc(var(--pos2-left) - var(--circleSize)/2);
+    top: calc(var(--pos2-top) - var(--circleSize)/2);
+}
+.bg[circleState='3'] {
+    background-color:  var(--Color3);
+    left: calc(var(--pos3-left) - var(--circleSize)/2);
+    top: calc(var(--pos3-top) - var(--circleSize)/2);
+}
+.bg[circleState='4'] {
+    background-color:  var(--Color4);
+    left: calc(var(--pos4-left) - var(--circleSize)/2);
+    top: calc(var(--pos4-top) - var(--circleSize)/2);
+}
+
+
+@keyframes bg-green {
+    0% {
+        transform: scale(5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
