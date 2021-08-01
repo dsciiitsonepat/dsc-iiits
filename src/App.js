@@ -5,12 +5,13 @@ import React from 'react';
 import Home from "./pages/Home";
 import Team from "./pages/Team";
 import logo from "./assets/dsc-logo.png";
+import Contacts from "./pages/Contacts";
+import Events from "./pages/Events";
 import {Swiper,SwiperSlide} from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import SwiperCore, {Mousewheel,Pagination} from 'swiper/core';
 import {useState} from 'react';
 SwiperCore.use([Mousewheel,Pagination]);
-
 
 function App() {
   const [bggreen, setBG] = React.useState(0)
@@ -18,7 +19,6 @@ function App() {
   const [swiper, setSwiper] = useState(null);
   const slideTo = (x) => {
       swiper.slideTo(x)
-      alert(swiper.realIndex);
   };
   const setAnimation = (x) => {
         setBG(swiper.realIndex + 1);
@@ -47,10 +47,10 @@ function App() {
          onSlideChange={(swipe)=>{setSlide(swipe.realIndex); setAnimation();}} 
         style={{width:"100%", height:"100%"}} 
       >
-        <SwiperSlide><Home/></SwiperSlide>
-        <SwiperSlide><Team/></SwiperSlide>
-        <SwiperSlide><Home/></SwiperSlide>
-        <SwiperSlide><Team/></SwiperSlide>
+        <SwiperSlide><Home setSlide={setSlide}/></SwiperSlide>
+        <SwiperSlide><Team setSlide={setSlide}/></SwiperSlide>
+        <SwiperSlide><Events setSlide={setSlide}/></SwiperSlide>
+        <SwiperSlide><Contacts setSlide={setSlide}/></SwiperSlide>
       </Swiper>
     </div>
   );
