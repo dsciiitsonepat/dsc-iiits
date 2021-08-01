@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function TeamCard(props) {
-	console.log(props.color);
 	return (
 		<div className="card">
 			<div className="bg-card">
