@@ -18,15 +18,17 @@ export default function Team() {
 	},[])
 
   return (
-    <div style={{height:"100vh", display:"flex", justifyContent:"center",alignItems:"center", flexDirection:"column"}}>
-      <h2>Team</h2>
-	  <div style={{width:"65%", display:"flex",justifyContent:"space-evenly", flexDirection:"row", height:"75%", alignItems:"center"}}>
+	<div className = "team-main">
+		<div className = "team-page">
+			<h1>Team</h1>
+		<div className = "card-page">
 	  {
 		  members.map((member,index) => {
 			  return <TeamCard key={index} member={member} color={COLORS[index%COLORS.length]}/>
 		  })
 	  }
-	  </div>
-    </div>
+	  	</div>
+		</div>
+	</div> 
   );
 }
