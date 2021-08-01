@@ -1,4 +1,3 @@
-import logo from "../assets/logo1.png";
 import "../styles/Events.css";
 import React, {useState} from 'react'
 import { FaArrowAltCircleRight,FaArrowAltCircleLeft } from "react-icons/fa";
