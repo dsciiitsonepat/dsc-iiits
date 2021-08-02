@@ -5,12 +5,11 @@ import firebase from '../firebase';
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
-import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
 
 
 import SwiperCore, { 
-	Pagination , Navigation
+  Navigation
   } from 'swiper/core';
   SwiperCore.use([Navigation]);
 

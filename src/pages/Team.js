@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/team.css";
 import TeamCardContainer from "../components/TeamCardSlider";
-import { Button } from "@material-ui/core";
 
 export default function Team() {
   return (
