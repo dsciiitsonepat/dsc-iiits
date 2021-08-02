@@ -24,6 +24,13 @@ export default function Home() {
           Join
         </Button>
       </div>
+      <div class="marquee">
+      <div class="track">
+      <div class="content">&nbsp;Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence 
+      Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence
+      </div>
+      </div>
+      </div>
     </>
   );
 }

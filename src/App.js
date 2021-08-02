@@ -51,13 +51,6 @@ function App() {
         <SwiperSlide><Events setSlide={setSlide}/></SwiperSlide>
         <SwiperSlide><Projects setSlide={setSlide}/></SwiperSlide>
       </Swiper>
-      <div class="marquee">
-      <div class="track">
-      <div class="content">&nbsp;Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence 
-      Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence
-      </div>
-      </div>
-      </div>
     </div>
   );
 }
