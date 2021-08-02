@@ -28,8 +28,8 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function GitCard ({project}) {
-	const classes = useStyles();
 	const theme = useTheme();
+	const classes = useStyles(theme);
 	const [contributors, setContributors] = useState([])
 
 	useEffect(() => {
@@ -37,14 +37,13 @@ export default function GitCard ({project}) {
 			const response = await fetch(`https://api.github.com/repos/dsciiitsonepat/${project.name}/contributors`)
 			const data = await response.json()
 			const avatar = []
-			console.log(data)
 			data.forEach(contributor => {
 				avatar.push({githubHandle: contributor.login, avatar: contributor.avatar_url})
 			})
 			setContributors(avatar)
 		}
 		getContributors();
-	}, [])
+	}, [project.name])
 
     return (
       <Card className={classes.root} elevation={5}>
