@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Home.css";
 import { Button } from "@material-ui/core";
 
@@ -19,6 +19,7 @@ export default function Home() {
             borderRadius: "32px",
             width: "30%",
           }}
+          href="https://gdsc.community.dev/indian-institute-of-information-technology-sonepat/"
         >
           Join
         </Button>

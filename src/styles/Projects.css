@@ -1,0 +1,21 @@
+.projects-page {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 32px;
+	margin-left: 32px;
+}
+
+.projects-page .projects-main{
+	width: 50%;
+	height: 65%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+a{
+	color: #000;
+}

@@ -29,8 +29,8 @@ const navData = [
     index:2,
   },
   {
-    label: "Contact Us",
-    link: "/contact",
+    label: "Projects",
+    link: "/projects",
     index:3,
   },
 ];
@@ -152,7 +152,7 @@ export default function Header({slide, slideTo}) {
     });
   };
 
-  const COLORS = ["#109D58","#FF4D4D", "#4286F5","#FFD65F"]
+  const COLORS = ["#4286F5","#109D58","#FF4D4D","#FFD65F"]
 
   const getMenu = () => {
     return navData.map(({ label, index}) => {

@@ -6,7 +6,7 @@ import React from 'react';
 import Home from "./pages/Home";
 import Team from "./pages/Team";
 import logo from "./assets/dsc-logo.png";
-import Contacts from "./pages/Contacts";
+import Projects from "./pages/Projects";
 import Events from "./pages/Events";
 import {Swiper,SwiperSlide} from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -49,7 +49,7 @@ function App() {
         <SwiperSlide><Home setSlide={setSlide}/></SwiperSlide>
         <SwiperSlide><Team setSlide={setSlide}/></SwiperSlide>
         <SwiperSlide><Events setSlide={setSlide}/></SwiperSlide>
-        <SwiperSlide><Contacts setSlide={setSlide}/></SwiperSlide>
+        <SwiperSlide><Projects setSlide={setSlide}/></SwiperSlide>
       </Swiper>
     </div>
   );

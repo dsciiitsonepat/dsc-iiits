@@ -1,7 +1,7 @@
 .event-main {
 	display: flex;
 	height: 100vh;
-	flex-direction: column-reverse;
+	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
 	margin-right: 32px;
