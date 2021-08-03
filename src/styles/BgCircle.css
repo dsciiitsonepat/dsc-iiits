@@ -1,9 +1,9 @@
 
 :root {
-    --Color1: lightblue;
-    --Color2: lightgreen;
-    --Color3: #FF7276;
-    --Color4: #fffe7a;
+    --Color1: #BBDEFB;
+    --Color2: #c8e6c9;
+    --Color3: #EF9A9A;
+    --Color4: #ffecb3;
     --circleSize: 85vw;
     --pos1-left: 90vw;
     --pos1-top: 0vh;
