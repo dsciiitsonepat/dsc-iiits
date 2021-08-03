@@ -28,6 +28,8 @@ export default function TeamCardContainer() {
 		fetchMembers()
 	},[])
 
+
+	
   return (
 	<>
     <Swiper slidesPerView={4} spaceBetween={30} navigation={true} className ="card-container">
