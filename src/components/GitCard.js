@@ -46,6 +46,7 @@ export default function GitCard ({project}) {
 	}, [project.name])
 
     return (
+      <a href={project.svn_url} style={{color:"#000", textDecoration:"none"}}>
       <Card className={classes.root} elevation={5}>
         <div className={classes.details}>
           <CardContent className={classes.content}>
@@ -62,5 +63,6 @@ export default function GitCard ({project}) {
         </div>
         <CardMedia className={classes.cover} image={project.owner.avatar_url}/>
       </Card>
+      </a>
     );
   }
