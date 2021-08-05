@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import "../styles/team.css";
-import TeamCardContainer from "../components/TeamCardSlider";
 import TeamCarousal from "../components/TeamCarousal";
 
 
 
 export default function Team() {
-	const [tab, setTab] = useState(0)
 
   return (
     <>

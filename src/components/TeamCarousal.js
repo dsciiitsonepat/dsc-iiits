@@ -1,7 +1,6 @@
 import "../styles/team.css";
 import firebase from '../firebase';
 import { useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useState } from "react";
 
 import TeamCard from "../components/TeamCard";
