@@ -50,10 +50,8 @@ export default function TeamCarousal(){
 			if(index >= lowerbound && index <= upperbound)
 			{
 				return <TeamCard key={index} member={member} color={COLORS[index%COLORS.length]}/>
-			}
-			else
-			{
-				return ;
+			}else {
+				return <></>
 			}
 	 	  })
 	   }
