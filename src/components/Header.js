@@ -123,14 +123,14 @@ export default function Header({slide, slideTo}) {
     };
 
     return (
-      <Toolbar>
+      <Toolbar style={{width:"100%"}}>
         <IconButton onClick={handleDrawerOpen}>
           <Md.MdMenu />
         </IconButton>
         <Drawer open={drawerOpen} onClose={handleDrawerClose}>
           <div className={drawerContainer}>{getMobileMenu()}</div>
         </Drawer>
-        <img src={logo} alt="logo" style={{ width: "100%" }}></img>
+       <img src={logo} alt="logo" style={{ width: "100%" }}></img>
       </Toolbar>
     );
   };
