@@ -43,6 +43,7 @@ const useStyles = makeStyles(() => ({
     paddingLeft: "118px",
     "@media (max-width: 900px)": {
       paddingLeft: 0,
+      paddingRight: 0,
     },
   },
   logo: {
@@ -130,7 +131,13 @@ export default function Header({slide, slideTo}) {
         <Drawer open={drawerOpen} onClose={handleDrawerClose}>
           <div className={drawerContainer}>{getMobileMenu()}</div>
         </Drawer>
-        <img src={logo} alt="logo" style={{ width: "100%" }}></img>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+        <img src={logo} alt="logo" style={{ width: "80%" }}></img>
+        </div>
       </Toolbar>
     );
   };
