@@ -50,6 +50,15 @@
     100% {transform: scale(.9);opacity: 1;}
 }
 
+@media screen and (max-width: 900px) {
+  .bg .logo-dsc {
+    height: 0;
+  }
+  
+  .bg .logo-dsc img {
+    opacity: 0;
+  }
+}
 
 /* @media screen and (max-width: 700px) {
     .bg .logo-dsc {
