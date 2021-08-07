@@ -14,7 +14,7 @@ import Events from "./pages/Events";
 import {Swiper,SwiperSlide} from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import SwiperCore, {Mousewheel,Pagination} from 'swiper/core';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 SwiperCore.use([Mousewheel,Pagination]);
 
 function App() {
@@ -33,17 +33,31 @@ function App() {
         setLogoPath(swiper.realIndex);
   }
 
+  const [mobileView, setMobileView] = useState(false);
+  useEffect(() => {
+    const setResponsive = () => {
+      return window.innerWidth < 900
+        ? setMobileView(true)
+        : setMobileView(false);
+    };
+    setResponsive();
+    window.addEventListener("resize", setResponsive);
+    return () => {
+      window.removeEventListener("resize", setResponsive);
+    };
+  }, []);
 
-  return (
-    <div className="App" style={{backgroundColor:"#f7f7f7"}}>
-          <div class="bg" style={{ borderRadius: "100%" }} circleState = {circleState}>
+  const desktopApp = () => {
+    return (
+      <>
+      <div class="bg" style={{ borderRadius: "100%" }} circleState = {circleState}>
             <div className="logo-dsc" style={{ backgroundColor: "#f0f0f0" }} logoState = {logoState}>
               <img src={LogoPaths[logoPath]} alt="logo" style={{ width: "100%" } }></img>
             </div>
           </div>  
       <Header setSlide={setSlide} slideTo={slideTo} slide={slide}/>
       <Swiper
-         direction={"horizontal"}
+         direction={mobileView ? "vertical" : "horizontal"}
          slidesPerView={1}
          spaceBetween={30}
          mousewheel={true}
@@ -57,6 +71,25 @@ function App() {
         <SwiperSlide><Events /></SwiperSlide>
         <SwiperSlide><Projects /></SwiperSlide>
       </Swiper>
+      </>
+    );
+  }
+
+
+  //JUST TO TEST [TODO] REMOVE IN PRODUCTION
+  const mobileApp = () => {
+    return (
+      <>
+      <div class="bg" style={{ borderRadius: "100%" }} circleState = {circleState}>
+      </div>
+      </>
+    )
+  }
+
+
+  return (
+    <div className="App" style={{backgroundColor:"#f7f7f7"}}>
+      {desktopApp()}
     </div>
   );
 }

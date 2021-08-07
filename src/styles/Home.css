@@ -13,6 +13,35 @@
     animation-delay: 2s;
 }
 
+@media screen and (max-width: 900px) {
+  .container {
+    width: 75%;
+    left: 12%;
+    top: 35%;
+  }
+
+  .container h2 {
+    font-size: 1.2rem;
+  }
+
+  .container h3 {
+    font-size: 1rem;
+  }
+
+  .container p {
+    font-size: 0.8rem;
+  }
+
+  .mob-logo-dsc {
+    position: relative;
+    width: 14vh;
+    height: 14vh;
+    border-radius: 100%;
+    left: 35%;
+    top: 15%;
+  }
+}
+
 @keyframes an {
     from {
         opacity: 0;

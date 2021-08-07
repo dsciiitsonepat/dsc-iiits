@@ -15,4 +15,6 @@
     display: flex;
 }
 
-
+.mob-logo-dsc {
+    opacity: 0;
+}

@@ -2,9 +2,7 @@ import {
   AppBar,
   Drawer,
   IconButton,
-  Link,
   makeStyles,
-  MenuItem,
   Toolbar,
   Button,
 } from "@material-ui/core";
@@ -126,7 +124,7 @@ export default function Header({slide, slideTo}) {
     };
 
     return (
-      <Toolbar>
+      <Toolbar style={{width:"100%"}}>
         <IconButton onClick={handleDrawerOpen}>
           <Md.MdMenu />
         </IconButton>
@@ -155,7 +153,7 @@ export default function Header({slide, slideTo}) {
             key: label,
           }}
         >
-          <MenuItem className={menuItem}>{label}</MenuItem>
+          <div className={menuItem}>{label}</div>
         </Button>
       );
     });
