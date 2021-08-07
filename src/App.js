@@ -46,10 +46,10 @@ function App() {
          onSlideChange={(swipe)=>{setSlide(swipe.realIndex); setAnimation();}} 
         style={{width:"100%", height:"100%"}} 
       >
-        <SwiperSlide><Home setSlide={setSlide}/></SwiperSlide>
-        <SwiperSlide><Team setSlide={setSlide}/></SwiperSlide>
-        <SwiperSlide><Events setSlide={setSlide}/></SwiperSlide>
-        <SwiperSlide><Projects setSlide={setSlide}/></SwiperSlide>
+        <SwiperSlide><Home /></SwiperSlide>
+        <SwiperSlide><Team /></SwiperSlide>
+        <SwiperSlide><Events /></SwiperSlide>
+        <SwiperSlide><Projects /></SwiperSlide>
       </Swiper>
     </div>
   );
