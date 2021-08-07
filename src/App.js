@@ -6,6 +6,9 @@ import React from 'react';
 import Home from "./pages/Home";
 import Team from "./pages/Team";
 import logo from "./assets/dsc-logo.png";
+import userLogo from "./assets/users.png";
+import eventLogo from "./assets/events.png";
+import contactLogo from "./assets/contact.png";
 import Projects from "./pages/Projects";
 import Events from "./pages/Events";
 import {Swiper,SwiperSlide} from 'swiper/react';
@@ -15,8 +18,10 @@ import {useState,useEffect} from 'react';
 SwiperCore.use([Mousewheel,Pagination]);
 
 function App() {
+  const LogoPaths = [logo,userLogo,eventLogo,contactLogo]
   const [circleState, setBG] = React.useState(0)
   const [logoState, setLogo] = React.useState(0)
+  const [logoPath, setLogoPath] = React.useState(0)
   const [slide,setSlide] = useState(0);
   const [swiper, setSwiper] = useState(null);
   const slideTo = (x) => {
@@ -25,6 +30,7 @@ function App() {
   const setAnimation = (x) => {
         setBG(swiper.realIndex + 1);
         setLogo(swiper.realIndex + 1);
+        setLogoPath(swiper.realIndex);
   }
 
   const [mobileView, setMobileView] = useState(false);
@@ -46,7 +52,7 @@ function App() {
       <>
       <div class="bg" style={{ borderRadius: "100%" }} circleState = {circleState}>
             <div className="logo-dsc" style={{ backgroundColor: "#f0f0f0" }} logoState = {logoState}>
-              <img src={logo} alt="logo" style={{ width: "100%" }}></img>
+              <img src={LogoPaths[logoPath]} alt="logo" style={{ width: "100%" } }></img>
             </div>
           </div>  
       <Header setSlide={setSlide} slideTo={slideTo} slide={slide}/>
