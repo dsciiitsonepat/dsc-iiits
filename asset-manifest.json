@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.8fd60f21.chunk.css",
-    "main.js": "/static/js/main.b7dde8a5.chunk.js",
-    "main.js.map": "/static/js/main.b7dde8a5.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.62900884.js",
-    "runtime-main.js.map": "/static/js/runtime-main.62900884.js.map",
-    "static/css/2.040ef5b4.chunk.css": "/static/css/2.040ef5b4.chunk.css",
-    "static/js/2.e0fc3284.chunk.js": "/static/js/2.e0fc3284.chunk.js",
-    "static/js/2.e0fc3284.chunk.js.map": "/static/js/2.e0fc3284.chunk.js.map",
-    "static/js/3.1d027de2.chunk.js": "/static/js/3.1d027de2.chunk.js",
-    "static/js/3.1d027de2.chunk.js.map": "/static/js/3.1d027de2.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.040ef5b4.chunk.css.map": "/static/css/2.040ef5b4.chunk.css.map",
-    "static/css/main.8fd60f21.chunk.css.map": "/static/css/main.8fd60f21.chunk.css.map",
-    "static/js/2.e0fc3284.chunk.js.LICENSE.txt": "/static/js/2.e0fc3284.chunk.js.LICENSE.txt",
-    "static/media/dsc-logo.4faf9cc2.png": "/static/media/dsc-logo.4faf9cc2.png",
-    "static/media/logo4.b027f976.png": "/static/media/logo4.b027f976.png"
+    "main.css": "/dsc-iiits/static/css/main.2a8599bd.chunk.css",
+    "main.js": "/dsc-iiits/static/js/main.65e78ab8.chunk.js",
+    "main.js.map": "/dsc-iiits/static/js/main.65e78ab8.chunk.js.map",
+    "runtime-main.js": "/dsc-iiits/static/js/runtime-main.af309a64.js",
+    "runtime-main.js.map": "/dsc-iiits/static/js/runtime-main.af309a64.js.map",
+    "static/css/2.040ef5b4.chunk.css": "/dsc-iiits/static/css/2.040ef5b4.chunk.css",
+    "static/js/2.835bb0e1.chunk.js": "/dsc-iiits/static/js/2.835bb0e1.chunk.js",
+    "static/js/2.835bb0e1.chunk.js.map": "/dsc-iiits/static/js/2.835bb0e1.chunk.js.map",
+    "static/js/3.ebcc6ea2.chunk.js": "/dsc-iiits/static/js/3.ebcc6ea2.chunk.js",
+    "static/js/3.ebcc6ea2.chunk.js.map": "/dsc-iiits/static/js/3.ebcc6ea2.chunk.js.map",
+    "index.html": "/dsc-iiits/index.html",
+    "static/css/2.040ef5b4.chunk.css.map": "/dsc-iiits/static/css/2.040ef5b4.chunk.css.map",
+    "static/css/main.2a8599bd.chunk.css.map": "/dsc-iiits/static/css/main.2a8599bd.chunk.css.map",
+    "static/js/2.835bb0e1.chunk.js.LICENSE.txt": "/dsc-iiits/static/js/2.835bb0e1.chunk.js.LICENSE.txt",
+    "static/media/dsc-logo.4faf9cc2.png": "/dsc-iiits/static/media/dsc-logo.4faf9cc2.png",
+    "static/media/logo4.b027f976.png": "/dsc-iiits/static/media/logo4.b027f976.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.62900884.js",
+    "static/js/runtime-main.af309a64.js",
     "static/css/2.040ef5b4.chunk.css",
-    "static/js/2.e0fc3284.chunk.js",
-    "static/css/main.8fd60f21.chunk.css",
-    "static/js/main.b7dde8a5.chunk.js"
+    "static/js/2.835bb0e1.chunk.js",
+    "static/css/main.2a8599bd.chunk.css",
+    "static/js/main.65e78ab8.chunk.js"
   ]
 }
