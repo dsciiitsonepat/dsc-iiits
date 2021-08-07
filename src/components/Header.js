@@ -2,9 +2,7 @@ import {
   AppBar,
   Drawer,
   IconButton,
-  Link,
   makeStyles,
-  MenuItem,
   Toolbar,
   Button,
 } from "@material-ui/core";
@@ -43,6 +41,7 @@ const useStyles = makeStyles(() => ({
     paddingLeft: "118px",
     "@media (max-width: 900px)": {
       paddingLeft: 0,
+      paddingRight: 0,
     },
   },
   logo: {
@@ -64,6 +63,8 @@ const useStyles = makeStyles(() => ({
   },
   drawerContainer: {
     padding: "20px 20px",
+    display: "flex",
+    flexDirection: "column",
     justifyContent: "space-evenly"
   },
   menuItem: {
@@ -130,24 +131,30 @@ export default function Header({slide, slideTo}) {
         <Drawer open={drawerOpen} onClose={handleDrawerClose}>
           <div className={drawerContainer}>{getMobileMenu()}</div>
         </Drawer>
-       <img src={logo} alt="logo" style={{ width: "100%" }}></img>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+        <img src={logo} alt="logo" style={{ width: "80%" }}></img>
+        </div>
       </Toolbar>
     );
   };
 
   const getMobileMenu = () => {
-    return navData.map(({ label, link }) => {
+    return navData.map(({ label, index }) => {
       return (
-        <Link
+        <Button
+        onClick={()=>{slideTo(index)}}
           {...{
-            to: link,
             color: "inherit",
             style: { textDecoration: "none" },
             key: label,
           }}
         >
-          <MenuItem className={menuItem}>{label}</MenuItem>
-        </Link>
+          <div className={menuItem}>{label}</div>
+        </Button>
       );
     });
   };
