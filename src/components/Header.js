@@ -65,6 +65,8 @@ const useStyles = makeStyles(() => ({
   },
   drawerContainer: {
     padding: "20px 20px",
+    display: "flex",
+    flexDirection: "column",
     justifyContent: "space-evenly"
   },
   menuItem: {
@@ -143,18 +145,18 @@ export default function Header({slide, slideTo}) {
   };
 
   const getMobileMenu = () => {
-    return navData.map(({ label, link }) => {
+    return navData.map(({ label, index }) => {
       return (
-        <Link
+        <Button
+        onClick={()=>{slideTo(index)}}
           {...{
-            to: link,
             color: "inherit",
             style: { textDecoration: "none" },
             key: label,
           }}
         >
           <MenuItem className={menuItem}>{label}</MenuItem>
-        </Link>
+        </Button>
       );
     });
   };
