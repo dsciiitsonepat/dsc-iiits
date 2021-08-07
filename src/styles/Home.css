@@ -13,6 +13,12 @@
     animation-delay: 2s;
 }
 
+
+.mob-logo-dsc {
+  opacity: 0;
+}
+
+
 @media screen and (max-width: 900px) {
   .container {
     width: 75%;
@@ -33,6 +39,7 @@
   }
 
   .mob-logo-dsc {
+    opacity: 1;
     position: relative;
     width: 14vh;
     height: 14vh;
@@ -51,10 +58,6 @@
         opacity: 1;
         transform: perspective(500px) translate3d(0, 0, 0);
     }
-}
-
-.mob-logo-dsc {
-    opacity: 0;
 }
 
 .marquee {
