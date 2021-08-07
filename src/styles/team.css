@@ -45,11 +45,15 @@
 	width: 100%;
 	height: 100%;
 	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .card .bg-card {
 	width: 90%;
 	height: 100%;
+	align-self: center;
 	background: #c5c5c5;
 	border-radius: 8px;
 }
@@ -68,12 +72,22 @@
 	flex-direction: column;
 }
 
+.card .bg-card .card-content h2{
+	font-size: 3vh;
+    margin-top: 6vh;
+}
+
+.card .bg-card .card-content p{
+	font-size: 2vh;
+    margin-top: 0vh;
+}
+
 .card .img-circle {
 	border-radius: 100%;
-	width: 6vw;
-	height: 6vw;
+	width: 10vh;
+	height: 10vh;
 	position: absolute;
-	top: 10%;
+	top: 4vh;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
