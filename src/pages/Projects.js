@@ -21,7 +21,7 @@ export default function Projects() {
     <div className="projects-page">
       <div className="projects-main">
         <h1>Projects</h1>
-        <div className="project-marquee" style={{height:"55%",width:"75%"}}>
+        <div className="project-marquee" >
           {repos && repos.map((item)=><GitCard project={item} className="proj-card"/>)}
         </div>
       </div>
