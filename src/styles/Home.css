@@ -12,7 +12,6 @@
     animation: an 1s ease-out both;
     animation-delay: 2s;
 }
-
 @keyframes an {
     from {
         opacity: 0;
