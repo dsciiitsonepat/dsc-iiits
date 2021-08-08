@@ -36,6 +36,8 @@ a {
     justify-content: center;
     align-items: flex-end;
     text-align: center;
+    margin-right: 0px;
+    margin-left: 0px;
   }
   .projects-page .projects-main {
     width: 80%;

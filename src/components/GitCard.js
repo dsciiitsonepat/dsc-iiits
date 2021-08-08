@@ -9,19 +9,22 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: "10px",
-    width: "100%",
+    minHeight: "25vh",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
   },
   details: {
     display: "flex",
     flexDirection: "column",
-    [theme.breakpoints.down("md")]: {
-      width: "2",
-    },
   },
   content: {
     flex: "1 0 auto",
     textAlign: "start",
-    width: "100%",
+    width: "80%",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+    },
   },
   cover: {
     width: 165,
