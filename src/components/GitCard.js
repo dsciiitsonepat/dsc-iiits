@@ -15,9 +15,15 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flex: "1 0 auto",
+    textAlign: "start",
+    width: "80%",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+    },
   },
   cover: {
     width: 165,
+    [theme.breakpoints.down("md")]: {},
   },
   stack: {
     display: "flex",
