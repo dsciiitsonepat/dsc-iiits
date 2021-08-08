@@ -16,5 +16,13 @@
 }
 
 .mob-logo-dsc {
-    opacity: 0;
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
 }
+
+
+/* .logo-dsc {
+    display: flex;
+} */
