@@ -5,14 +5,9 @@ import { Card, CardContent, CardMedia, Typography, makeStyles, useTheme } from "
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
     borderRadius: "10px",
-    minHeight: "25vh",
-    [theme.breakpoints.down("md")]: {
-      flexDirection: "column",
-    },
+    minHeight: "65%",
+    padding: " 10px 6px",
   },
   details: {
     display: "flex",
@@ -20,15 +15,9 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flex: "1 0 auto",
-    textAlign: "start",
-    width: "80%",
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-    },
   },
   cover: {
     width: 165,
-    [theme.breakpoints.down("md")]: {},
   },
   stack: {
     display: "flex",
@@ -49,10 +38,7 @@ export default function GitCard({ project }) {
       const data = await response.json()
       const avatar = []
       data.forEach((contributor) => {
-        avatar.push({
-          githubHandle: contributor.login,
-          avatar: contributor.avatar_url,
-        })
+        avatar.push({ githubHandle: contributor.login, avatar: contributor.avatar_url })
       })
       setContributors(avatar)
     }
