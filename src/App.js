@@ -50,7 +50,7 @@ function App() {
   const desktopApp = () => {
     return (
       <>
-      <div class="bg" style={{ borderRadius: "100%" }} circleState = {circleState}>
+      <div className="bg" style={{ borderRadius: "100%" }} circleState = {circleState}>
             <div className="logo-dsc" style={{ backgroundColor: "#f0f0f0" }} logoState = {logoState}>
               <img src={LogoPaths[logoPath]} alt="logo" style={{ width: "100%" } }></img>
             </div>
@@ -79,10 +79,12 @@ function App() {
   //JUST TO TEST [TODO] REMOVE IN PRODUCTION
   const mobileApp = () => {
     return (
-      <>
-      <div class="bg" style={{ borderRadius: "100%" }} circleState = {circleState}>
+      // <div className="bg" style={{ borderRadius: "100%" }} circleState = {circleState}>
+        <div className="mob-logo-dsc" style={{ backgroundColor: "#f0f0f0" }} logoState = {logoState}>
+          <img src={LogoPaths[logoPath]} alt="logo" style={{ width: "100%" } }></img>
+          {/* <p>Hello</p> */}
+        {/* </div> */}
       </div>
-      </>
     )
   }
 

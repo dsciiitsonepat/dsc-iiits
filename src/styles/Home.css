@@ -13,35 +13,6 @@
     animation-delay: 2s;
 }
 
-@media screen and (max-width: 900px) {
-  .container {
-    width: 75%;
-    left: 12%;
-    top: 35%;
-  }
-
-  .container h2 {
-    font-size: 1.2rem;
-  }
-
-  .container h3 {
-    font-size: 1rem;
-  }
-
-  .container p {
-    font-size: 0.8rem;
-  }
-
-  .mob-logo-dsc {
-    position: relative;
-    width: 14vh;
-    height: 14vh;
-    border-radius: 100%;
-    left: 35%;
-    top: 15%;
-  }
-}
-
 @keyframes an {
     from {
         opacity: 0;
@@ -55,6 +26,38 @@
 
 .mob-logo-dsc {
     opacity: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .homepage {
+        display: flex;
+        margin-top: 28%;
+        flex-direction: column;
+    }
+    .container {
+        align-self: center;
+        width: 70%;
+        left: 15%;
+    }
+    .container h2 {
+        margin-block-end: 5px;
+        font-size: 1.2rem;
+    }
+    .container h3 {
+        margin-block-end: 5px;
+        font-size: 1rem;
+    }
+    .container p {
+        font-size: 0.8rem;
+    }
+    .mob-logo-dsc {
+        position: relative;
+        width: 14vh;
+        height: 14vh;
+        align-self: center;
+        border-radius: 100%;
+        opacity: 1;
+    }
 }
 
 .marquee {
