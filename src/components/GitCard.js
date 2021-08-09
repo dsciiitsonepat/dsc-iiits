@@ -1,66 +1,71 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect,useState } from "react"
 import StackedAvatar from "./StackAvatar"
-import { Card, CardContent, CardMedia, Typography, makeStyles, useTheme } from "@material-ui/core"
+import { Card, CardContent, CardMedia, Typography, makeStyles,useTheme } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: "10px",
-    minHeight: "25vh",
-    [theme.breakpoints.down("md")]: {
-      flexDirection: "column",
-    },
+    display: 'flex',
+    borderRadius:"10px",
+	minHeight:"65%",
+  flexDirection:'row',
+  padding:"8px",
+  [theme.breakpoints.down("md")]: {
+    flexDirection:'column',
+  },
   },
   details: {
-    display: "flex",
-    flexDirection: "column",
+    display: 'flex',
+    flexDirection: 'column',
   },
   content: {
-    flex: "1 0 auto",
-    textAlign: "start",
-    width: "80%",
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-    },
+    flex: '1 0 auto',
   },
   cover: {
     width: 165,
-    [theme.breakpoints.down("md")]: {},
+    // alignSelf:'flex-end',
+    alignSelf:'center',
+    display:"flex",
+    justifyContent:'center',
+    alignItems:'center',
+    minHeight:80,
+    [theme.breakpoints.down("md")]: {
+      minHeight:0,
+    },
+   
   },
   stack: {
-    display: "flex",
-    alignItems: "center",
+    
+    display: 'flex',
+    alignItems: 'center',
     paddingLeft: theme.spacing(1),
     paddingBottom: theme.spacing(1),
+    [theme.breakpoints.down("md")]: {
+      alignSelf:'center',
+    },
   },
 }))
 
-export default function GitCard({ project }) {
-  const theme = useTheme()
-  const classes = useStyles(theme)
-  const [contributors, setContributors] = useState([])
 
-  useEffect(() => {
-    const getContributors = async () => {
-      const response = await fetch(`https://api.github.com/repos/dsciiitsonepat/${project.name}/contributors`)
-      const data = await response.json()
-      const avatar = []
-      data.forEach((contributor) => {
-        avatar.push({
-          githubHandle: contributor.login,
-          avatar: contributor.avatar_url,
-        })
-      })
-      setContributors(avatar)
-    }
-    getContributors()
-  }, [project.name])
+export default function GitCard ({project}) {
+	const theme = useTheme()
+	const classes = useStyles(theme)
+	const [contributors, setContributors] = useState([])
 
-  return (
-    <a href={project.svn_url} style={{ color: "#000", textDecoration: "none" }}>
+	useEffect(() => {
+		const getContributors = async () => {
+			const response = await fetch(`https://api.github.com/repos/dsciiitsonepat/${project.name}/contributors`)
+			const data = await response.json()
+			const avatar = []
+			data.forEach(contributor => {
+				avatar.push({githubHandle: contributor.login, avatar: contributor.avatar_url})
+			})
+			setContributors(avatar)
+		}
+		getContributors()
+	}, [project.name])
+
+    return (
+      <a href={project.svn_url} style={{color:"#000", textDecoration:"none"}}>
       <Card className={classes.root} elevation={5}>
         <div className={classes.details}>
           <CardContent className={classes.content}>
@@ -72,11 +77,11 @@ export default function GitCard({ project }) {
             </Typography>
           </CardContent>
           <div className={classes.stack}>
-            <StackedAvatar maxAvatars={3} round={true} size={35} avatars={contributors} />
+          <StackedAvatar maxAvatars={3} round={true} size={35} avatars={contributors} /> 
           </div>
         </div>
-        <CardMedia className={classes.cover} image={project.owner.avatar_url} />
+        <CardMedia className={classes.cover} image={project.owner.avatar_url}/>
       </Card>
-    </a>
-  )
-}
+      </a>
+    )
+  }
