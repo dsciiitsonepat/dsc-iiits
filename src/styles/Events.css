@@ -32,9 +32,6 @@
   justify-content: center;
   flex-direction: row;
 }
-.mob-logo-dsc {
-  display: none;
-}
 
 .event-slide {
   opacity: 0;
@@ -94,13 +91,7 @@
     position: relative;
     width: 80%;
   }
-  .mob-logo-dsc {
-    display: flex;
-    margin-top: 25%;
-    margin-bottom: 15%;
-    width: 90px;
-    height: 90px;
-  }
+
   .event-main {
     margin-right: 8px;
     margin-left: 8px;
@@ -110,12 +101,12 @@
     width: 100%;
     height: 60%;
   }
-  h1 {
+  .event-main h1 {
     margin-block-end: 0%;
     margin-block-start: 0%;
     font-size: 1.1rem;
   }
-  p {
+  .event-main p {
     font-size: 0.85rem;
   }
 
@@ -135,10 +126,10 @@
     background-color: #f8d2d2 !important;
   }
 
-  .arrow-right {
+  .event-main .arrow-right {
     transform: translate(50px, -30px) !important;
   }
-  .arrow-left {
+  .event-main .arrow-left {
     transform: translate(-50px, -30px) !important;
   }
 }

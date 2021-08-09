@@ -26,9 +26,6 @@ export default function Events() {
 
   return (
     <div className="event-main">
-      <div className="mob-logo-dsc" style={{ backgroundColor: "#f0f0f0" }}>
-        <img src={logo} alt="logo" style={{ width: "100%" }}></img>
-      </div>
       <div className="event-page">
         <h1>Events & Workshops</h1>
         <div className="tab-wrapper">
