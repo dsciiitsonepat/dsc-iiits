@@ -26,7 +26,6 @@ export default function TeamCarousal() {
 
   var numberOfCards = matches600 ? 2 : 4
   useEffect(() => {
-    numberOfCards = matches600 ? 2 : 4
     matches600 ? setUpperbound(1) : setUpperbound(3)
   }, [matches600])
 
