@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/Home.css";
-import { Button } from "@material-ui/core";
+import { Button, IconButton } from "@material-ui/core";
 import logo from "../assets/dsc-logo.png";
+import * as Fa from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -27,6 +28,12 @@ export default function Home() {
         >
           Join
         </Button>
+        <div style={{display:"flex", justifyContent:"space-evenly", alignItems:"center", width:"100%", margin:"24px", fontSize:"1.5rem"}}>
+          <IconButton><Fa.FaInstagram/></IconButton>
+          <IconButton><Fa.FaGithub/></IconButton>
+          <IconButton><Fa.FaTwitter/></IconButton>
+          <IconButton><Fa.FaLinkedin/></IconButton>
+        </div>
       </div>
       <div class="marquee">
         <div class="track">
