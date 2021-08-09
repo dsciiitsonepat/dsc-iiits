@@ -22,7 +22,7 @@ export default function TeamCarousal() {
     }
     fetchMembers()
     matches600 ? setUpperbound(1) : setUpperbound(3)
-  }, [])
+  }, [matches600])
 
   var numberOfCards = matches600 ? 2 : 4
   useEffect(() => {

@@ -75,20 +75,6 @@ function App() {
     );
   }
 
-
-  //JUST TO TEST [TODO] REMOVE IN PRODUCTION
-  const mobileApp = () => {
-    return (
-      // <div className="bg" style={{ borderRadius: "100%" }} circleState = {circleState}>
-        <div className="mob-logo-dsc" style={{ backgroundColor: "#f0f0f0" }} logoState = {logoState}>
-          <img src={LogoPaths[logoPath]} alt="logo" style={{ width: "100%" } }></img>
-          {/* <p>Hello</p> */}
-        {/* </div> */}
-      </div>
-    )
-  }
-
-
   return (
     <div className="App" style={{backgroundColor:"#f7f7f7"}}>
       {desktopApp()}

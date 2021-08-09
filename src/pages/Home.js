@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Home.css";
 import { Button, IconButton } from "@material-ui/core";
-import logo from "../assets/dsc-logo.png";
 import * as Fa from "react-icons/fa";
 
 export default function Home() {

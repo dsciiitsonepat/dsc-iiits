@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import "../styles/Events.css";
 import EventCarousel from "../components/EventCarousel";
 import firebase from "../firebase";
-import logo from "../assets/events.png";
 
 export default function Events() {
   const [tab, setTab] = useState(0);
