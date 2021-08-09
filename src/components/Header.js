@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import * as Md from "react-icons/md";
-import logo from "../assets/logo4.png";
+import logoHead from "../assets/logo-head.png";
 
 const navData = [
   {
@@ -101,7 +101,7 @@ export default function Header({slide, slideTo}) {
   const navBarDesktop = () => {
     return (
       <Toolbar className={toolbar}>
-        <img src={logo} alt="logo" style={{ width: "30%" }}></img>
+        <img src={logoHead} alt="logo" style={{ width: "30%" }}></img>
         <div
           style={{
             width: "55%",
@@ -136,7 +136,7 @@ export default function Header({slide, slideTo}) {
           justifyContent: "center",
           alignItems: "center",
         }}>
-        <img src={logo} alt="logo" style={{ width: "80%" }}></img>
+        <img src={logoHead} alt="logo" style={{ width: "80%" }}></img>
         </div>
       </Toolbar>
     );
