@@ -13,9 +13,6 @@ export default function Home() {
 
   return (
     <div className="homepage">
-      <div className="mob-logo-dsc" style={{ backgroundColor: "#f0f0f0" }}>
-        <img src={logo} alt="logo" style={{ width: "100%" }}></img>
-      </div>
       <div className="container">
         <h2>Developer Students Club</h2>
         <h3>Powered by Google</h3>

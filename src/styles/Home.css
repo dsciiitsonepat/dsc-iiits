@@ -32,7 +32,7 @@
 @media screen and (max-width: 900px) {
   .homepage {
     display: flex;
-    margin-top: 32%;
+    margin-top: 35vh;
     flex-direction: column;
   }
   .container {
