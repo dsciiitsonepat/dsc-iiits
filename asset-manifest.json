@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/dsc-iiits/static/css/main.2a8599bd.chunk.css",
-    "main.js": "/dsc-iiits/static/js/main.5762d7c4.chunk.js",
-    "main.js.map": "/dsc-iiits/static/js/main.5762d7c4.chunk.js.map",
-    "runtime-main.js": "/dsc-iiits/static/js/runtime-main.af309a64.js",
-    "runtime-main.js.map": "/dsc-iiits/static/js/runtime-main.af309a64.js.map",
+    "main.css": "/dsc-iiits/static/css/main.95bdb328.chunk.css",
+    "main.js": "/dsc-iiits/static/js/main.43d2dc0d.chunk.js",
+    "main.js.map": "/dsc-iiits/static/js/main.43d2dc0d.chunk.js.map",
+    "runtime-main.js": "/dsc-iiits/static/js/runtime-main.006d01e8.js",
+    "runtime-main.js.map": "/dsc-iiits/static/js/runtime-main.006d01e8.js.map",
     "static/css/2.040ef5b4.chunk.css": "/dsc-iiits/static/css/2.040ef5b4.chunk.css",
-    "static/js/2.e3197c28.chunk.js": "/dsc-iiits/static/js/2.e3197c28.chunk.js",
-    "static/js/2.e3197c28.chunk.js.map": "/dsc-iiits/static/js/2.e3197c28.chunk.js.map",
-    "static/js/3.ebcc6ea2.chunk.js": "/dsc-iiits/static/js/3.ebcc6ea2.chunk.js",
-    "static/js/3.ebcc6ea2.chunk.js.map": "/dsc-iiits/static/js/3.ebcc6ea2.chunk.js.map",
+    "static/js/2.431a3271.chunk.js": "/dsc-iiits/static/js/2.431a3271.chunk.js",
+    "static/js/2.431a3271.chunk.js.map": "/dsc-iiits/static/js/2.431a3271.chunk.js.map",
+    "static/js/3.50c6eebb.chunk.js": "/dsc-iiits/static/js/3.50c6eebb.chunk.js",
+    "static/js/3.50c6eebb.chunk.js.map": "/dsc-iiits/static/js/3.50c6eebb.chunk.js.map",
     "index.html": "/dsc-iiits/index.html",
     "static/css/2.040ef5b4.chunk.css.map": "/dsc-iiits/static/css/2.040ef5b4.chunk.css.map",
-    "static/css/main.2a8599bd.chunk.css.map": "/dsc-iiits/static/css/main.2a8599bd.chunk.css.map",
-    "static/js/2.e3197c28.chunk.js.LICENSE.txt": "/dsc-iiits/static/js/2.e3197c28.chunk.js.LICENSE.txt",
+    "static/css/main.95bdb328.chunk.css.map": "/dsc-iiits/static/css/main.95bdb328.chunk.css.map",
+    "static/js/2.431a3271.chunk.js.LICENSE.txt": "/dsc-iiits/static/js/2.431a3271.chunk.js.LICENSE.txt",
     "static/media/dsc-logo.4faf9cc2.png": "/dsc-iiits/static/media/dsc-logo.4faf9cc2.png",
-    "static/media/logo4.b027f976.png": "/dsc-iiits/static/media/logo4.b027f976.png"
+    "static/media/logo-head.b027f976.png": "/dsc-iiits/static/media/logo-head.b027f976.png",
+    "static/media/test.e72d28e4.jpg": "/dsc-iiits/static/media/test.e72d28e4.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.af309a64.js",
+    "static/js/runtime-main.006d01e8.js",
     "static/css/2.040ef5b4.chunk.css",
-    "static/js/2.e3197c28.chunk.js",
-    "static/css/main.2a8599bd.chunk.css",
-    "static/js/main.5762d7c4.chunk.js"
+    "static/js/2.431a3271.chunk.js",
+    "static/css/main.95bdb328.chunk.css",
+    "static/js/main.43d2dc0d.chunk.js"
   ]
 }
