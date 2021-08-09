@@ -6,9 +6,13 @@ import * as Fa from "react-icons/fa";
 export default function Home() {
 
   const sendMail = () => {
-    const email = "dsc.iiits.tech@gmail.com"
+    const email = "dsc.iiits@gmail.com"
     window.location.href = "mailto:" + email;
   }
+
+  const igLink = "https://www.instagram.com/dsciiits";
+  const gitLink = "https://github.com/dsciiitsonepat";
+  const liLink = "https://www.linkedin.com/company/dsc-iiit-sonepat";
 
   return (
     <div className="homepage">
@@ -31,10 +35,9 @@ export default function Home() {
           Join
         </Button>
         <div style={{display:"flex", justifyContent:"space-evenly", alignItems:"center", width:"100%", margin:"24px", fontSize:"1.5rem"}}>
-          <IconButton><Fa.FaInstagram/></IconButton>
-          <IconButton><Fa.FaGithub/></IconButton>
-          <IconButton><Fa.FaTwitter/></IconButton>
-          <IconButton><Fa.FaLinkedin/></IconButton>
+          <IconButton href={igLink}><Fa.FaInstagram/></IconButton>
+          <IconButton href={gitLink}><Fa.FaGithub/></IconButton>
+          <IconButton href={liLink}><Fa.FaLinkedin/></IconButton>
           <IconButton onClick={sendMail}><Fa.FaEnvelope/></IconButton>
         </div>
       </div>
