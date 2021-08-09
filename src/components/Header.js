@@ -2,15 +2,13 @@ import {
   AppBar,
   Drawer,
   IconButton,
-  Link,
   makeStyles,
-  MenuItem,
   Toolbar,
   Button,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import * as Md from "react-icons/md";
-import logo from "../assets/logo4.png";
+import logoHead from "../assets/logo-head.png";
 
 const navData = [
   {
@@ -43,6 +41,7 @@ const useStyles = makeStyles(() => ({
     paddingLeft: "118px",
     "@media (max-width: 900px)": {
       paddingLeft: 0,
+      paddingRight: 0,
     },
   },
   logo: {
@@ -64,6 +63,8 @@ const useStyles = makeStyles(() => ({
   },
   drawerContainer: {
     padding: "20px 20px",
+    display: "flex",
+    flexDirection: "column",
     justifyContent: "space-evenly"
   },
   menuItem: {
@@ -100,7 +101,7 @@ export default function Header({slide, slideTo}) {
   const navBarDesktop = () => {
     return (
       <Toolbar className={toolbar}>
-        <img src={logo} alt="logo" style={{ width: "30%" }}></img>
+        <img src={logoHead} alt="logo" style={{ width: "30%" }}></img>
         <div
           style={{
             width: "55%",
@@ -123,31 +124,37 @@ export default function Header({slide, slideTo}) {
     };
 
     return (
-      <Toolbar>
+      <Toolbar style={{width:"100%"}}>
         <IconButton onClick={handleDrawerOpen}>
           <Md.MdMenu />
         </IconButton>
         <Drawer open={drawerOpen} onClose={handleDrawerClose}>
           <div className={drawerContainer}>{getMobileMenu()}</div>
         </Drawer>
-        <img src={logo} alt="logo" style={{ width: "100%" }}></img>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+        <img src={logoHead} alt="logo" style={{ width: "80%" }}></img>
+        </div>
       </Toolbar>
     );
   };
 
   const getMobileMenu = () => {
-    return navData.map(({ label, link }) => {
+    return navData.map(({ label, index }) => {
       return (
-        <Link
+        <Button
+        onClick={()=>{slideTo(index)}}
           {...{
-            to: link,
             color: "inherit",
             style: { textDecoration: "none" },
             key: label,
           }}
         >
-          <MenuItem className={menuItem}>{label}</MenuItem>
-        </Link>
+          <div className={menuItem}>{label}</div>
+        </Button>
       );
     });
   };

@@ -1,12 +1,17 @@
-import React, { useEffect,useState } from "react";
-import StackedAvatar from "./StackAvatar";
+import React, { useEffect,useState } from "react"
+import StackedAvatar from "./StackAvatar"
 import { Card, CardContent, CardMedia, Typography, makeStyles,useTheme } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     borderRadius:"10px",
-	height:"65%",
+	minHeight:"65%",
+  flexDirection:'row',
+  padding:"8px",
+  [theme.breakpoints.down("md")]: {
+    flexDirection:'column',
+  },
   },
   details: {
     display: 'flex',
@@ -17,19 +22,33 @@ const useStyles = makeStyles((theme) => ({
   },
   cover: {
     width: 165,
+    // alignSelf:'flex-end',
+    alignSelf:'center',
+    display:"flex",
+    justifyContent:'center',
+    alignItems:'center',
+    minHeight:80,
+    [theme.breakpoints.down("md")]: {
+      minHeight:0,
+    },
+   
   },
   stack: {
+    
     display: 'flex',
     alignItems: 'center',
     paddingLeft: theme.spacing(1),
     paddingBottom: theme.spacing(1),
+    [theme.breakpoints.down("md")]: {
+      alignSelf:'center',
+    },
   },
-}));
+}))
 
 
 export default function GitCard ({project}) {
-	const theme = useTheme();
-	const classes = useStyles(theme);
+	const theme = useTheme()
+	const classes = useStyles(theme)
 	const [contributors, setContributors] = useState([])
 
 	useEffect(() => {
@@ -42,7 +61,7 @@ export default function GitCard ({project}) {
 			})
 			setContributors(avatar)
 		}
-		getContributors();
+		getContributors()
 	}, [project.name])
 
     return (
@@ -64,5 +83,5 @@ export default function GitCard ({project}) {
         <CardMedia className={classes.cover} image={project.owner.avatar_url}/>
       </Card>
       </a>
-    );
+    )
   }

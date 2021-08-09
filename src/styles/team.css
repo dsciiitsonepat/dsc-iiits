@@ -1,129 +1,144 @@
 .team-main {
-	display: flex;
-	height: 100vh;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end;
-	margin-right: 32px;
-	margin-left: 32px;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: 32px;
+  margin-left: 32px;
 }
 
-.team-main .team-page{
-	width: 60%;
-	height: 70%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.team-main .team-page {
+  width: 60%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.team-main .team-page .teamcarousal-container {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .team-main {
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .team-main .team-page {
+        width: 110%;
+    }
 }
 
 .team.main .team-page .card-page {
-	height: 100%;
-	justify-content: center;
-	align-items: center;
-	display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-.card-container{
-	width: 90%;
-	height: 100%;
-
+.card-container {
+  width: 90%;
+  height: 100%;
 }
 
 .bg-blue {
-	position: fixed;
-	left: -48%;
-	top:-80%;
-	width: 1424px;
-	height: 1424px;
-	border-bottom-left-radius: 100%;
-	/* background:"#bad4ff"; */
+  position: fixed;
+  left: -48%;
+  top: -80%;
+  width: 1424px;
+  height: 1424px;
+  border-bottom-left-radius: 100%;
+  /* background:"#bad4ff"; */
 }
 
 .card {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 180px;
 }
 
 .card .bg-card {
-	width: 90%;
-	height: 100%;
-	align-self: center;
-	background: #c5c5c5;
-	border-radius: 8px;
+  width: 90%;
+  height: 100%;
+  align-self: center;
+  background: #c5c5c5;
+  border-radius: 8px;
 }
 
 .card .bg-card .card-header {
-	height: 35%;
-	border-radius:8px 8px 0px  0px;
+  height: 35%;
+  border-radius: 8px 8px 0px 0px;
 }
 
 .card .bg-card .card-content {
-	height: 65%;
-	border-radius: 8px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  height: 65%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.card .bg-card .card-content h2{
-	font-size: 3vh;
-    margin-top: 6vh;
+.card .bg-card .card-content h2 {
+  font-size: 3vh;
+  margin-top: 6vh;
 }
 
-.card .bg-card .card-content p{
-	font-size: 2vh;
-    margin-top: 0vh;
+.card .bg-card .card-content p {
+  font-size: 2vh;
+  margin-top: 0vh;
 }
 
 .card .img-circle {
-	border-radius: 100%;
-	width: 10vh;
-	height: 10vh;
-	position: absolute;
-	top: 4vh;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
+  border-radius: 100%;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 4vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
-
 
 .team-slider {
-	min-width: 60vw;
-	height: 30vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
+  min-width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
-.card-section{
-	display: flex;
-	width: 80%;
-	height: 100%;
-	flex-direction: row;
-	justify-content: space-evenly;
+.card-section {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .arrow-left {
-	position: absolute;
-	top: 50%;
-	left: 32px;
-	font-size: 1rem;
-	z-index: 10;
+  font-size: 1rem;
+  z-index: 10;
 }
 
-.arrow-right{
-	position: absolute;
-	top: 50%;
-	right: 32px;
-	font-size: 1rem;
-	z-index: 10;
+.arrow-right {
+  font-size: 1rem;
+  z-index: 10;
+}
+
+@media screen and (max-width: 400px) {
+  .arrow-right {
+    transform: translateX(20px) !important;
+  }
+  .arrow-left {
+    transform: translateX(-20px) !important;
+  }
 }
