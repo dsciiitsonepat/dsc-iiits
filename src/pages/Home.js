@@ -5,6 +5,12 @@ import logo from "../assets/dsc-logo.png";
 import * as Fa from "react-icons/fa";
 
 export default function Home() {
+
+  const sendMail = () => {
+    const email = "dsc.iiits.tech@gmail.com"
+    window.location.href = "mailto:" + email;
+  }
+
   return (
     <div className="homepage">
       <div className="mob-logo-dsc" style={{ backgroundColor: "#f0f0f0" }}>
@@ -33,6 +39,7 @@ export default function Home() {
           <IconButton><Fa.FaGithub/></IconButton>
           <IconButton><Fa.FaTwitter/></IconButton>
           <IconButton><Fa.FaLinkedin/></IconButton>
+          <IconButton onClick={sendMail}><Fa.FaEnvelope/></IconButton>
         </div>
       </div>
       <div class="marquee">
