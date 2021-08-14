@@ -1,7 +1,6 @@
 import "../styles/Events.css";
 import React, { useState } from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
-import logo from "../assets/test.jpg";
 export default function EventCarousel(props) {
   const [current, setCurrent] = useState(0);
 
@@ -43,7 +42,7 @@ function EventCard({ event }) {
         <p>{event.desc}</p>
       </div>
       <div className="event-media">
-        <img className="event-image" src={logo} alt="logo"></img>
+        <img className="event-image" src={event.media} alt="logo"></img>
       </div>
     </div>
   );
