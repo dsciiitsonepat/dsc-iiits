@@ -17,7 +17,8 @@ export default function TeamCarousal() {
     const fetchMembers = async () => {
       const db = firebase.firestore()
       const data = await db.collection("members").get()
-      const members = data.docs.map((doc) => doc.data())
+      
+      const members = data.docs.sort((a,b) => {return parseInt(a.id) > parseInt(b.id) ? 1 : -1}).map((doc) => doc.data())
       setMembers(members)
     }
     fetchMembers()

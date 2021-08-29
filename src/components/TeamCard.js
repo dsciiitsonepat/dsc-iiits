@@ -10,7 +10,9 @@ export default function TeamCard(props) {
           <p>{props.member.role}</p>
         </div>
       </div>
-      <div className="img-circle" style={{ backgroundColor: "#f0f0f0" }}></div>
+      <div className="img-circle" style={{ backgroundColor: "#f0f0f0",overflow:"hidden"}}>
+        <img src={props.member.image} style={{width:"100%", borderRadius:"100%", height:"100%",objectFit:"cover"}} alt={props.member.name}></img>
+      </div>
     </div>
   )
 }
